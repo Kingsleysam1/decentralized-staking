@@ -7,51 +7,61 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        light: {
-          primary: "#C8F5FF",
-          "primary-content": "#026262",
-          secondary: "#89d7e9",
-          "secondary-content": "#088484",
-          accent: "#026262",
-          "accent-content": "#E9FBFF",
-          neutral: "#088484",
-          "neutral-content": "#F0FCFF",
-          "base-100": "#F0FCFF",
-          "base-200": "#E1FAFF",
-          "base-300": "#C8F5FF",
-          "base-content": "#088484",
-          info: "#026262",
-          success: "#34EEB6",
-          warning: "#FFCF72",
-          error: "#FF8863",
-          "--rounded-btn": "9999rem",
-          ".tooltip": { "--tooltip-tail": "6px" },
-          ".link": { textUnderlineOffset: "2px" },
-          ".link:hover": { opacity: "80%" },
+         light: {
+          primary: '#B22222', // firebrick red
+          'primary-content': '#FFF5F5',
+
+          secondary: '#FF6347', // tomato
+          'secondary-content': '#1A0000',
+
+          accent: '#FF4500', // orange-red glow
+          'accent-content': '#FFF5F5',
+
+          neutral: '#FFE4E1', // misty rose for light contrast
+          'neutral-content': '#5B0000',
+
+          'base-100': '#FFF8F8', // very light background
+          'base-200': '#FFDADA',
+          'base-300': '#FFC0CB',
+          'base-content': '#5B0000',
+
+          info: '#FF7F50',
+          success: '#FF6F61',
+          warning: '#FFA07A',
+          error: '#DC143C',
+         '--rounded-btn': '9999rem',
+          '.tooltip': { '--tooltip-tail': '6px' },
+          '.link': { textUnderlineOffset: '2px' },
+          '.link:hover': { opacity: '80%' },
         },
       },
       {
-        dark: {
-          primary: "#026262",
-          "primary-content": "#C8F5FF",
-          secondary: "#107575",
-          "secondary-content": "#E9FBFF",
-          accent: "#C8F5FF",
-          "accent-content": "#088484",
-          neutral: "#E9FBFF",
-          "neutral-content": "#11ACAC",
-          "base-100": "#11ACAC",
-          "base-200": "#088484",
-          "base-300": "#026262",
-          "base-content": "#E9FBFF",
-          info: "#C8F5FF",
-          success: "#34EEB6",
-          warning: "#FFCF72",
-          error: "#FF8863",
-          "--rounded-btn": "9999rem",
-          ".tooltip": { "--tooltip-tail": "6px", "--tooltip-color": "oklch(var(--p))" },
-          ".link": { textUnderlineOffset: "2px" },
-          ".link:hover": { opacity: "80%" },
+         dark: {
+          primary: '#8B0000', // deep blood red
+          'primary-content': '#FFECEC',
+
+          secondary: '#B22222',
+          'secondary-content': '#FFFAFA',
+
+          accent: '#FF4500',
+          'accent-content': '#FFF5F5',
+
+          neutral: '#1A0000',
+          'neutral-content': '#FFDDDD',
+
+          'base-100': '#140000',
+          'base-200': '#1C0000',
+          'base-300': '#2D0000',
+          'base-content': '#FFDADA',
+          info: '#FF6347',
+          success: '#FF6F61',
+          warning: '#FFB347',
+          error: '#FF3B3F',
+
+          '--rounded-btn': '9999rem',
+          '.tooltip': { '--tooltip-tail': '6px', '--tooltip-color': 'oklch(var(--p))' },
+          '.link': { textUnderlineOffset: '2px' },
+          '.link:hover': { opacity: '80%' },
         },
       },
     ],
@@ -63,4 +73,25 @@ module.exports = {
       animation: { "pulse-fast": "pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite" },
     },
   },
+  extend: {
+  keyframes: {
+    fadeIn: {
+      '0%': { opacity: 0 },
+      '100%': { opacity: 1 },
+    },
+    typewriter: {
+      '0%': { width: '0%' },
+      '100%': { width: '100%' },
+    },
+    blinkCaret: {
+      '0%, 100%': { borderColor: 'transparent' },
+      '50%': { borderColor: 'white' },
+    },
+  },
+  animation: {
+    fadeIn: 'fadeIn 1s ease-out forwards',
+    typewriter: 'typewriter 3s steps(40, end) forwards',
+    blink: 'blinkCaret 0.8s step-end infinite',
+  },
+}
 };

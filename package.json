@@ -53,5 +53,10 @@
   "packageManager": "yarn@3.2.3",
   "engines": {
     "node": ">=18.18.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "4.9.5",
+    "@react-three/fiber": "^9.2.0",
+    "three": "^0.178.0"
   }
 }
