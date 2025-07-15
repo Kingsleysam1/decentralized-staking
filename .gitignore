@@ -1,23 +1,69 @@
-# dependencies
-node_modules
+# --------------------
+# Node & Environment
+# --------------------
+node_modules/
+.env
+.env.*          # e.g., .env.local, .env.development
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# yarn
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-
-# eslint
-.eslintcache
-
-# misc
+# --------------------
+# OS-specific files
+# --------------------
 .DS_Store
+Thumbs.db
 
-# IDE
-.vscode
-.idea
+# --------------------
+# Logs and temp files
+# --------------------
+logs
+*.log
+*.tmp
+*.swp
+*.swo
+.cache/
+.next/
+out/
 
-# cli
-dist
+# --------------------
+# TypeScript
+# --------------------
+*.tsbuildinfo
+
+# --------------------
+# Hardhat/Foundry Artifacts
+# --------------------
+artifacts/
+cache/
+typechain/
+typechain-types/
+coverage/
+deployments/
+gas-report.json
+forge-cache/
+
+# --------------------
+# Scaffold-ETH specific
+# --------------------
+packages/hardhat/.env
+packages/nextjs/.env
+packages/hardhat/deployments/
+packages/hardhat/cache/
+packages/hardhat/artifacts/
+packages/hardhat/typechain-types/
+
+# --------------------
+# Vscode / IDE configs
+# --------------------
+.vscode/
+.idea/
+*.code-workspace
+
+# --------------------
+# Misc
+# --------------------
+*.bak
+*.orig
+*.lock
